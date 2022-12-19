@@ -6,6 +6,7 @@ public class VendingProg {
         products.add(new Product("fanta", 10.55f, "drink", 0.5f));
         products.add(new Product("cola", 8.33f, "drink", 0.5f));
         products.add(new HotDrinkProduct("tea", 5.58f, "hot drink", 0.2f, 100.00f));
+        products.add(new HotDrinkProduct("coffe", 15.58f, "hot drink", 0.2f, 90.00f));
 
         VendingMachine vendingMachine = new VendingMachine(products);
 
