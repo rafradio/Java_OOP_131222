@@ -27,7 +27,7 @@ public class VendingMachine {
     public void buyingProduct() {
         Integer userChoise = this.choosingProduct();
         
-        if (userChoise > 0 && userChoise < 4) {
+        if (userChoise > 0 && userChoise < this.products.size()+1) {
             this.deposingMoney(userChoise);
         }
       
@@ -35,7 +35,7 @@ public class VendingMachine {
 
     public Integer choosingProduct() {
         Scanner myObj = new Scanner(System.in);  
-        System.out.println("\n" + "Введите цифру от 1 до 3: ");
+        System.out.println("\n" + "Введите цифру от 1 до " + this.products.size());
         Integer userChoise = Integer.parseInt(myObj.nextLine());
         try {
             System.out.println("\n" + "Вы выбрали " + this.products.get(userChoise-1).getProduct());
